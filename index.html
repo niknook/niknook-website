@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="NikNook installs and stocks free snack, drink, coffee and protein shake vending machines in residential and commercial buildings and gyms in Montréal.">
+<meta name="description" content="NikNook installs and stocks free snack, drink, coffee and protein shake vending machines in residential and commercial buildings, university campuses and gyms in Montréal.">
 <title>NikNook</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
@@ -76,6 +76,13 @@ h2{font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:800;max-width:22ch}
 .place h3{font-size:1.3rem;font-weight:800;margin:14px 0 8px}
 .place p{color:var(--muted)}
 .place strong{color:var(--fg);font-weight:800}
+.campus{grid-column:1/-1;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;background:var(--accent-soft);border-color:transparent;padding:32px}
+.campus h3{font-size:1.7rem;margin-top:6px}
+.campus .tag{display:inline-block;margin-top:14px;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.campus-text p:last-child{color:var(--fg);max-width:52ch}
+.campus-spots{list-style:none;margin:0;padding:0;display:grid;gap:10px;min-width:0}
+.campus-spots li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:600}
+.campus-spots li::before{content:"";display:inline-block;width:.5em;height:.5em;border-radius:50%;background:var(--coral);margin-right:.6em;vertical-align:.1em}
 .place svg{width:40px;height:40px;color:var(--accent)}
 
 .needs{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
@@ -105,6 +112,7 @@ footer .wrap{padding-block:24px;display:flex;justify-content:space-between;gap:1
   .hero-grid,.needs,.contact .wrap{grid-template-columns:1fr}
   .machine{order:-1;width:180px;justify-self:start}
   .steps,.places{grid-template-columns:1fr}
+  .campus{grid-template-columns:1fr;padding:24px}
   section.block .wrap,.contact .wrap{padding-block:56px}
 }
 @media (prefers-reduced-motion:no-preference){
@@ -126,7 +134,7 @@ footer .wrap{padding-block:24px;display:flex;justify-content:space-between;gap:1
       <div>
         <p class="eyebrow">Vending service · Montréal</p>
         <h1>A vending machine for your building, <em>free</em>.</h1>
-        <p class="lede">NikNook installs and stocks snack, drink, coffee and protein shake machines in residential and commercial buildings at no cost to you. Your residents, staff and visitors get a convenient amenity, and you get nothing new to manage.</p>
+        <p class="lede">NikNook installs and stocks snack, drink, coffee and protein shake machines in residential and commercial buildings, university campuses and gyms at no cost to you. Your residents, students, staff and visitors get a convenient amenity, and you get nothing new to manage.</p>
         <div class="ctas">
           <a class="btn btn-primary" href="#contact">Request a machine</a>
           <a class="btn btn-ghost" href="#how">How it works</a>
@@ -202,12 +210,27 @@ footer .wrap{padding-block:24px;display:flex;justify-content:space-between;gap:1
   <section class="block alt">
     <div class="wrap">
       <p class="kicker">Who it's for</p>
-      <h2>Buildings where people want a snack nearby</h2>
+      <h2>From campuses to condos, wherever people want a snack nearby</h2>
       <div class="places">
+        <article class="place campus">
+          <div class="campus-text">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg>
+            <p class="tag">Featured</p>
+            <h3>Universities &amp; colleges</h3>
+            <p><strong>Built for campus life.</strong> Fresh coffee for early classes, snacks for late nights in the library, and protein shakes at the campus gym. Students and staff get what they need without leaving the building, and the university pays nothing.</p>
+          </div>
+          <ul class="campus-spots">
+            <li>Libraries &amp; study halls</li>
+            <li>Student residences</li>
+            <li>Campus gyms &amp; sports centres</li>
+            <li>Faculty &amp; department buildings</li>
+            <li>Student lounges &amp; cafeterias</li>
+          </ul>
+        </article>
         <article class="place">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-4h6v4M8 8h.01M12 8h.01M16 8h.01M8 12h.01M12 12h.01M16 12h.01"/></svg>
           <h3>Residential buildings</h3>
-          <p>Apartments, condos and student residences. A late-night drink or snack without leaving the building.</p>
+          <p>Apartments and condos. A late-night drink or snack without leaving the building.</p>
         </article>
         <article class="place">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>
